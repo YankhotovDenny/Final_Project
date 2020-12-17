@@ -36,14 +36,14 @@ flag_hero = s[1]
 f.close()
 # создаем звуковой объект
 # воспроизводим его (фоновая музыка)
-# splat = pygame.mixer.Sound("image\fon.wav")
-# splat.set_volume(0.1)  # громкость фоновой музыки
+splat = pygame.mixer.Sound("image\fon.wav")
+splat.set_volume(0.1)  # громкость фоновой музыки
 # present = pygame.mixer.Sound("image\present.wav")
 # present.set_volume(0.5)
 # jump = pygame.mixer.Sound("image\jump.wav")  # звук прыжка
 # jump.set_volume(0.2)
 
-# splat.play()
+splat.play()
 
 
 '''Считывание ТОПа лидеров'''
