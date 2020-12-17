@@ -38,10 +38,10 @@ f.close()
 # воспроизводим его (фоновая музыка)
 splat = pygame.mixer.Sound("fon.wav")
 splat.set_volume(0.1)  # громкость фоновой музыки
-# present = pygame.mixer.Sound("image\present.wav")
-# present.set_volume(0.5)
-# jump = pygame.mixer.Sound("image\jump.wav")  # звук прыжка
-# jump.set_volume(0.2)
+present = pygame.mixer.Sound("present.wav")
+present.set_volume(0.5)
+jump = pygame.mixer.Sound("jump.wav")  # звук прыжка
+jump.set_volume(0.2)
 
 splat.play()
 
@@ -410,7 +410,7 @@ while running:
                 menu = Menu(punkts)
             else:
                 xxx.jump()
-                # jump.play()
+                jump.play()
 
     if xxx.tick % xxx.tickrate == 0 and xxx.rect.centery > 150:
         if xxx.nap == 0:
@@ -499,7 +499,7 @@ while running:
             s2.remove(i)
             i.kill()
             Presents += 1
-            # present.play()  # музыка начисления баллов
+            present.play()  # музыка начисления баллов
             break
 
     all_sprites.draw(screen)
